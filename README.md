@@ -1,2 +1,2 @@
 # gamedev
-C/C++ C# Game Dev Stuff
+C/C++ and C# Game Dev Stuff
