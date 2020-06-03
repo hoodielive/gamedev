@@ -1,5 +1,7 @@
 Vector3 
 
+Vectors are used to measure points in 2D or 3D space.
+
 Rotation 
 Position
 Scale
