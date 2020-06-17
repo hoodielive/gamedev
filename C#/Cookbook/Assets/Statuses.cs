@@ -21,9 +21,18 @@ public class Statuses : MonoBehaviour
     }
     void Update()
     {
+        // Ensure processes take place over a fixed period of time,
+        // regardless of how many frames per second the game is
+        // is running at (known as the game's frame rate).
+        
         var movement = direction * speed;
+        
+        // We use the Time class deltaTime property to to access the
+        // amount of time needed to render the last frame and incorporate
+        // this into our calculations.
+        
         movement *= Time.deltaTime;
+        
         this.transform.Translate(movement);
     }
-
 }
