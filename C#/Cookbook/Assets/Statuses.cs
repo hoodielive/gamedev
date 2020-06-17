@@ -9,7 +9,9 @@ public class Statuses : MonoBehaviour
     private float speed = 0.1f;
     void Start()
     {
-       Debug.Log("I am running from Start"); 
+        var colorFade = FindObjectOfType<ColorFading>();
+        Debug.Log("I am running from Start");
+        Debug.Log(colorFade);
     }
     private void Awake()
     {

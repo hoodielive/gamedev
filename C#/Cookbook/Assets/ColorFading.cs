@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ColorFading : MonoBehaviour
 {
-    void update()
+    void Awake()
     {
         var meshRenderer = GetComponent<MeshRenderer>();
         
