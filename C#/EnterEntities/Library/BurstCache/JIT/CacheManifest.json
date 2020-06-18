@@ -1,0 +1,156 @@
+{
+  "BurstVersion": "2e177021-c09c-4243-a5a4-9fd000335405",
+  "Assemblies": [
+    {
+      "FullName": "Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "LastWriteTime": "2020-06-17T23:33:32Z"
+    },
+    {
+      "FullName": "netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51",
+      "LastWriteTime": "2020-06-16T23:53:11Z"
+    },
+    {
+      "FullName": "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "LastWriteTime": "2020-06-16T23:53:11Z"
+    },
+    {
+      "FullName": "Unity.Jobs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "LastWriteTime": "2020-06-17T23:33:35Z"
+    },
+    {
+      "FullName": "Unity.Entities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "LastWriteTime": "2020-06-17T23:33:49Z"
+    },
+    {
+      "FullName": "UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "LastWriteTime": "2020-06-16T23:53:05Z"
+    },
+    {
+      "FullName": "Unity.Collections, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "LastWriteTime": "2020-06-17T23:33:34Z"
+    },
+    {
+      "FullName": "mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "LastWriteTime": "2020-06-16T23:53:11Z"
+    },
+    {
+      "FullName": "Unity.Mathematics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "LastWriteTime": "2020-06-17T23:20:32Z"
+    },
+    {
+      "FullName": "Unity.Burst.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=null",
+      "LastWriteTime": "2020-06-17T22:17:27Z"
+    },
+    {
+      "FullName": "System.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+      "LastWriteTime": "2020-06-16T23:53:11Z"
+    },
+    {
+      "FullName": "System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+      "LastWriteTime": "2020-06-16T15:11:10Z"
+    }
+  ],
+  "Functions": [
+    {
+      "FullName": "System.Int32 Unity.Burst.Intrinsics.X86::DoGetCSRTrampoline()",
+      "ModuleOptionsHash": 8794384452606821980,
+      "ModuleHash": "2d9c9493fea7efe497b566c9a925358a",
+      "LinkName": "CDCA4A5193BE5947",
+      "AssemblyDependencyIndices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "FullName": "System.Void Unity.Burst.Intrinsics.X86::DoSetCSRTrampoline(System.Int32)",
+      "ModuleOptionsHash": 8794384452606821980,
+      "ModuleHash": "7fd024c5437d77b294ee735c859bedda",
+      "LinkName": "801E9A000BB37B05",
+      "AssemblyDependencyIndices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "FullName": "System.Void Unity.Jobs.IJobBurstScheduableExtensions/JobStruct2`1<Unity.Entities.GatherChunksAndOffsetsJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
+      "ModuleOptionsHash": 8794384452606821980,
+      "ModuleHash": "1ddeb5a29f452a5b625d346140b6e536",
+      "LinkName": "D882D8B12F01DA2B",
+      "AssemblyDependencyIndices": [
+        3,
+        4,
+        1,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "FullName": "System.Void Unity.Jobs.IJobParallelForExtensionsBurstScheduable/ParallelForJobStructBurstScheduable`1<Unity.Entities.GatherChunks>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
+      "ModuleOptionsHash": 8794384452606821980,
+      "ModuleHash": "7139fb6090c2593ac5c859bf9b73c29c",
+      "LinkName": "06544D36FC0BC147",
+      "AssemblyDependencyIndices": [
+        3,
+        4,
+        1,
+        2,
+        5,
+        7,
+        6
+      ]
+    },
+    {
+      "FullName": "System.Void Unity.Jobs.IJobBurstScheduableExtensions/JobStruct2`1<Unity.Entities.EntityDataAccess/DestroyChunks>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
+      "ModuleOptionsHash": 8794384452606821980,
+      "ModuleHash": "4ffda17aa358c608507cf367eb732308",
+      "LinkName": "51B442B71140A5B2",
+      "AssemblyDependencyIndices": [
+        3,
+        4,
+        1,
+        2,
+        5,
+        7,
+        6,
+        8,
+        0,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "FullName": "System.Void Unity.Jobs.IJobParallelForExtensionsBurstScheduable/ParallelForJobStructBurstScheduable`1<Unity.Entities.GatherChunksWithFiltering>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
+      "ModuleOptionsHash": 8794384452606821980,
+      "ModuleHash": "2e983e8e4f18b03d3bef672b6ff5a12d",
+      "LinkName": "513095DC10357B49",
+      "AssemblyDependencyIndices": [
+        3,
+        4,
+        1,
+        2,
+        5,
+        7,
+        6
+      ]
+    },
+    {
+      "FullName": "System.Void Unity.Jobs.IJobBurstScheduableExtensions/JobStruct2`1<Unity.Entities.GatherChunksAndOffsetsWithFilteringJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
+      "ModuleOptionsHash": 8794384452606821980,
+      "ModuleHash": "404c1320010e35b2786b2171b5812c4e",
+      "LinkName": "11051CB9634C8C18",
+      "AssemblyDependencyIndices": [
+        3,
+        4,
+        1,
+        2,
+        5,
+        6,
+        7
+      ]
+    }
+  ]
+}
