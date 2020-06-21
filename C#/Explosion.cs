@@ -8,6 +8,8 @@ public class Explosion : MonoBehaviour
 
 	void Start ()
 	{
+		// Secrets to being productive.
+		Debug.Log("I heard you talking.")
 	}
 
 	void Update ()
