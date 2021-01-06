@@ -22,7 +22,7 @@ int main()
 {
 	  Enemy enemy;
 		Boss boss;
-		enemy.Update(deltaTime);
+		enemy.Updated(deltaTime);
 		boss.UpdateObjects(deltaTime);
 
 }
