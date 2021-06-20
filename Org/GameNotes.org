@@ -1,0 +1,31 @@
+* Game Dev Tips
+
+** Structure Game Objects
+ Note: the word 'object' is taken.
+
+
+ #+begin_src cpp
+struct Entity {
+    Vector3 position;
+    Quaternion orientation;
+
+    unsigned int flags;
+
+    virtual void update() {}
+};
+
+struct Door : public Entity {
+    float openness_current;
+    float openness_target;
+
+    void update() override;
+};
+
+struct Human : public Entity {
+    char *name;
+    void update() override;j
+};
+
+ #+end_src
+
+ #+RESULTS:
