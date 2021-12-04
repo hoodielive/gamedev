@@ -1,0 +1,59 @@
+#+TITLE: Game Development
+* Unity
+The Unity Engine is top pick. This document stores techniques and information that is useful for me to grasp the engine's concepts.
+* Interface
+
+* Scripting
+** Basic Movement 2D
+#+Begin_src csharp
+using System;
+using UnityEngine;
+
+[RequireComponent(typeOf(CharacterGrounding))]
+[RequireComponent(typeOf(Rigidbody2D))]
+public class PlayerMovementController : MonoBehaviour, IMove
+{
+    [SerialField] private float _moveSpeed = 3f;
+    [SerialField] private float _jumpForce = 400f;
+    private new Rigidbody 2D _rigidbody2D;
+    private characterGrounding _characterGrounding;
+
+    public float Speed { get; private set; }
+
+    private void Awake()
+    {
+        // Cache the rigidbody field value.
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _characterGrounding = GetComponent<CharacterGrounding>();
+    }
+
+    void Update()
+    {
+        /** This functionality moves the Player. */
+
+        // Grab Axis.
+        float horizontal = Input.GetAxis("Horizontal");
+        speed = horizontal;
+
+        // Before you can control the Player, you'll need a Vector3.
+        Vector3 movement = new Vector3(horizontal, 0);
+
+        // Move smoothly and with the speed 'we' define.
+        transform.position += movement * Time.deltaTime * _moveSpeed;
+
+        // We've added the CharacterGrounding class. We only want the player to
+        // jump when the isGrounded boolean is se to 'true'.
+        if (Input.GetButtonDown("Fire1") && _characterGrounding.IsGrounded == true)
+        {
+            // Multiply this by an amount of force.
+            _rigidbody2D.AddForce(Vector2.up * _jumpForce);
+        }
+    }
+}
+#+end_src
+
+* Unreal Engine
+
+* Interface
+
+* Scripting

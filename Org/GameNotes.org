@@ -3,7 +3,6 @@
 ** Structure Game Objects
  Note: the word 'object' is taken.
 
-
  #+begin_src cpp
 struct Entity {
     Vector3 position;
