@@ -12,6 +12,8 @@ public BasicMovement : MonoBehaviour
 
     pos.x = h * Time.deltaTime;
     pos.y = v * Time.deltaTime;
+
+    transform.position = pos;
   }
 }
 
