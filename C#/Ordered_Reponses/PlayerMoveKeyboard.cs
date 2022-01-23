@@ -43,5 +43,20 @@ public class PlayerMoveKeyboard : MonoBehaviour
     transform.position += new Vector3(_movementX, 0f, 0f) * Time.deltaTime * _moveForce;
   }
 
+  private AnimatePlayer()
+  {
+    if (_anim > 0)
+    {
+      _anim.SetBool(_WALK_ANIMATION, true);
+    }
+    else if (_movement X < 0)
+    {
+      _anim.SetBool(_WALK_ANIMATION, true);
+    }
+    else
+    {
+      _anim.SetBool(_WALK_ANIMATION, false);
+    }
+  }
 
 }
