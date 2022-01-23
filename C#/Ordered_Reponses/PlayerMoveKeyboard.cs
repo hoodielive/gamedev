@@ -39,7 +39,8 @@ public class PlayerMoveKeyboard : MonoBehaviour
 
   PlayerMoveKeyboard()
   {
-    _movementX = new Vector3();
+    _movementX = Input.GetAxisRaw("Horizontal");
+    transform.position += new Vector3(_movementX, 0f, 0f) * Time.deltaTime * _moveForce;
   }
 
 
