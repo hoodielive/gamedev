@@ -59,4 +59,20 @@ public class PlayerMoveKeyboard : MonoBehaviour
     }
   }
 
+  void PlayerJump()
+  {
+    if (Input.GetButtonDown("Jump") && _isGrounded)
+    {
+      _isGrounded = false;
+      _myBody.AddForce(new Vector2(0f, _jumpForce), ForceMode2D.Impulse);
+    }
+  }
+
+  void OnCollisionEnter2D(Collision2D collision)
+  {
+    if (collision.gameObject.CompareGameTag(_GROUND_TAG))
+    {
+      _isGrounded = true;
+    }
+  }
 }
