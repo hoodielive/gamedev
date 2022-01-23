@@ -3,6 +3,8 @@ using System;
 
 public BasicMovement : MonoBehaviour
 {
+  private float _speed = 10f;
+
   void Update()
   {
     float h = Input.GetAxis("Horizontal");
@@ -10,8 +12,8 @@ public BasicMovement : MonoBehaviour
 
     Vector2 pos = transform.position;
 
-    pos.x = h * Time.deltaTime;
-    pos.y = v * Time.deltaTime;
+    pos.x = h * _speed * Time.deltaTime;
+    pos.y = v * _speed * Time.deltaTime;
 
     transform.position = pos;
   }
