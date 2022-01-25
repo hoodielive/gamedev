@@ -74,5 +74,13 @@ public class PlayerMoveKeyboard : MonoBehaviour
     {
       _isGrounded = true;
     }
+
+    if (collision.gameObject.CompareTag(_ENEMY_TAG)) Destroy(gameObject);
   }
+  
+  private void OnTriggerEnter2D(Collider2D col)
+  {
+    if (col.CompareTag(_ENEMY_TAG)) Destroy(gameObject);
+  }
+
 }
