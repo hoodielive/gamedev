@@ -1,31 +1,71 @@
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include <stdio.h>
 
-int main(int argc, char** argv)
+// Screen Dimensions
+const int SCREEN_WIDTH = 640;
+const int SCREEN_HEIGHT = 480;
+
+int main(int argc, char* args[])
 {
-  bool quit = false;
-  SDL_Event event;
-  
-  SDL_Init(SDL_INIT_VIDEO);
+  // The window we'll be rendering to
+  SDL_Window* window = NULL;
 
-  SDL_Window* screen = SDL_CreateWindow(
-      "My SDL Empty Window",
-      SDL_WINDOWPOS_UNDEFINED,
-      SDL_WINDOWPOS_UNDEFINED,
-      640,
-      480,
-      0
-  );
+  // The surface contained by the window
+  SDL_Surface* screenSurface = NULL; 
 
-  while (!quit)
+  // Initialize SDL
+  if (SDL_Init( SDL_INIT_VIDEO ) < 0)
   {
-    SDL_WaitEvent(&event);
-    switch (event.type)
+    printf( "SDL could not initialize! SDL_Error: %s\n", SDL_GetError() );
+  }
+  else
+  {
+    // Create Window
+    window = SDL_CreateWindow( 
+        "SDL Tutorial", 
+        SDL_WINDOWPOS_UNDEFINED, 
+        SDL_WINDOWPOS_UNDEFINED,
+        SCREEN_WIDTH,
+        SCREEN_HEIGHT,
+        SDL_WINDOW_SHOWN
+    );
+
+    if (window == NULL)
     {
-      case SDL_QUIT:
-        quit = true;
-        break;
+      printf("Window could not be created! SDL_ERROR: %s\n", SDL_GetError());
+    }
+    else
+    {
+      // Get Window Surface
+      screenSurface = SDL_GetWindowSurface ( window );
+
+      // Fill the surface white
+      SDL_FillRect( screenSurface, NULL, SDL_MapRGB( screenSurface->format, 0Xff, 0xFF, 0xFF ));
+
+      // Update the surface
+      SDL_UpdateWindowSurface( window );
+
+      // Hack the get window to stay up
+      SDL_Event e; 
+
+      bool quit = false;
+
+      while ( quit == false )
+      {
+        while ( SDL_PollEvent (&e))
+        {
+          if (e.type == SDL_QUIT ) quit = true;
+        }
+      }
     }
   }
+
+  // Destroy Window
+
+  SDL_DestroyWindow ( window );
+
+  // Quit SDL subsystems
   SDL_Quit();
 
   return 0;

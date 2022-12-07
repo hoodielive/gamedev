@@ -11,7 +11,7 @@ pub fn main()
     let sdl_context = sdl2::init().unwrap();
     let video_subsystem = sdl_context.video().unwrap();
 
-    let window = video_subsystem.window("Rust SDL2 Demo", 800, 600)
+    let window = video_subsystem.window("Becoming", 800, 600)
         .position_centered()
         .build()
         .unwrap();
