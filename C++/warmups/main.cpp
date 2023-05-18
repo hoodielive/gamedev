@@ -5,7 +5,7 @@ namespace ConsoleHelper
 {
     class string
     {
-        friend bool operator == (const string &string1, const string &string2);
+        friend bool operator==(const string &string1, const string &string2);
 				friend bool operator < (const string &string1, const string &string2);
 
 			public:
